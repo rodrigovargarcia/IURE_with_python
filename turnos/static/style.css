@@ -1,0 +1,291 @@
+header{
+    background-image: url(/static/assets/braden-collum-75XHJzEIeUc-unsplash.jpg);
+    background-size: cover;
+    height: 650px;
+    position: relative;   
+    overflow-x: hidden; 
+}
+
+header .navbar li{
+    list-style: none;
+}
+
+header a{
+    font-family: Modernist;
+    font-weight: 300;
+    font-size: 1rem;
+    color: #0D3745;
+}
+
+.nav-item:hover{
+    transform: scale(1.01);
+    color: #0D3745;
+}
+
+@font-face {
+    font-family: ClairePalmer;
+    src: url(fonts/letra1-clairePalmer.otf);
+}
+
+@font-face{
+    font-family: Modernist;
+    src: url(fonts/Sk-Modernist-Regular.otf)
+}
+
+/* .carousel-img{
+    width: 100%;
+    height: 500px; 
+    object-fit: cover;
+} */
+
+.container{
+    max-width: 1100px;
+    font-family: ClairePalmer;   
+    overflow: scroll; 
+    position: relative;
+}
+
+.container-fluid{
+    max-width: 2000px;
+}
+
+#btnContacto{
+    background-color: #dad1c9;
+    color: #0d3745;
+    font-family: Modernist;
+    font-weight: bold;
+    font-size: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#btnContactoNav{
+    background-color: #dad1c9;
+    color: #0d3745;
+    font-family: Modernist;
+    font-weight: bold;
+    font-size: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#btnContactoNav:hover{
+    background-color: #e6e6e6;
+}
+
+#btnContacto:hover{
+    background-color: #e6e6e6;
+}
+
+.title{
+    font-family: Modernist;
+    font-size: 3rem;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+/* row-presentacion */
+
+#row-presentacion{
+    background-color: #e6e6e6;
+}
+
+#row-presentacion img{
+    border-radius: 50%;
+}
+
+.circular-img{
+    width:400px;    
+}
+
+#row-presentacion h1{
+    font-size: 3rem;
+    font-family: ClairePalmer;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.row{
+    margin:0;
+    font-family: Modernist;
+    color: #0d3745;
+}
+
+/* row-sobreNosotros */
+
+#row-sobreNosotros{
+    background-color: #515c24;  
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+}
+
+#row-sobreNosotros .row{
+    align-items: center;
+}
+
+#row-sobreNosotros h4{
+    font-family: Modernist;
+    color:#e6e6e6;
+    font-size: 30px;
+    text-align: justify;   
+}
+
+#row-sobreNosotros h2{
+    font-family: ClairePalmer;
+    color: #e6e6e6;
+    font-size: 4rem;
+}
+
+.logo-circular-img{
+    border-radius: 50%;
+    /* max-width: 400px;
+    max-height: 400px; */
+    overflow: hidden;
+}
+
+#descripcion-iure{
+    font-family: ClairePalme;
+    color:#e6e6e6;
+    text-align: left;    
+}
+
+/* Acordeon Preguntas frecuentes*/
+
+#row-docNecesaria{
+    background-color: #0D3745;
+}
+
+#row-docNecesaria h3{
+    font-family: ClairePalmer;
+    font-size: 35px;
+}
+
+#row-docNecesaria .col-md-3{
+    color: #e6e6e6;
+}
+
+#btnAcordeon{
+    font-family: Modernist;
+}
+
+/* .accordion-button{
+    background-color: #0D3745;
+} */
+
+
+
+
+
+/* ACORDEON YOUTUBE */
+
+/* body{
+    height: 100vh;
+    width: 100vw;
+    background: #f1c40f;
+} */
+
+/* .container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.accordion{
+    width: 90%;
+    background: transparent;
+}
+
+.accordion-item{
+    background: #0D3745;
+    border: none;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1),-2px -2px 8px rgba(0,0,0,0.1);
+}
+
+.accordion-body{
+    background: #e6e6e6;
+    font-size: 1rem;
+    color:#0D3745;
+}
+
+.accordion-button{
+    font-size: 1.5rem;    
+    background: transparent;
+    outline: none;
+    border: 1px solid rgba(0,0,0,0.1);
+    font-weight: 500;
+    color:#e6e6e6;
+}
+
+.accordion-button:focus{    
+    box-shadow: none;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.accordion-button:not(.collapsed){
+    background: rgba(0,0,0,0.1);
+    color: #dad1c9;
+    box-shadow: none;
+}
+
+.accordion-button::after{
+    background-image: none;
+    content:"\f0d7";
+    
+    width: auto;
+    height: auto;
+}
+
+.accordion-button:not(.collapsed)::after{
+    background-image: none;
+}
+
+#btnAcordeon{
+    font-family: ClairePalmer;
+}
+
+/* ROW-CONTACTANOS */
+
+#row-contactanos{    
+    background-image: url(assets/pexels-antonio-filigno-10351722.jpg);  
+    background-size: cover;    
+}
+
+#row-contactanos h2{
+    font-family: ClairePalmer;
+    font-size: 3rem;
+    color: #e6e6e6
+}
+
+.card{
+    background-color: #dad1c9;
+}
+
+#btnEnviarForm{
+    font-family: Modernist;
+    color: #e6e6e6;
+    background-color: #750821;
+}
+
+#row-footer{
+    background-color: #750821;
+    overflow: hidden;    
+}
+
+
+/* ROW TURNOS */
+
+#btnTurnos{
+    background-color: #dad1c9;
+    color: #0d3745;
+    font-family: Modernist;
+    font-weight: bold;
+    font-size: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#btnTurnos:hover{
+    background-color: #e6e6e6;
+}
