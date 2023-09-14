@@ -1,0 +1,24 @@
+<form action="" method="post" class="row g-3">
+    {% csrf_token %}
+    {% for campo in formulario %}
+    <div class="col-auto">
+        <div class="mb-3">
+            <label for="{{ campo.name }}" class="form-label">{{ campo.label }}</label>
+            {% if campo.name == 'fecha' %}
+            <input type="date" class="form-control" name="{{ campo.name }}"
+            placeholder="{{ campo.label }}" />
+            {% elif campo.field.widget.input_type == 'select' %}
+            <select class="form-control" name="{{ campo.name }}">
+                {% for option in campo.field.choices %}
+                <option value="{{ option.0 }}">{{ option.1 }}</option>
+                {% endfor %}
+            </select>
+            {% else %}
+            <input type="{{ campo.field.widget.input_type }}" class="form-control" name="{{ campo.name }}"
+            placeholder="{{ campo.label }}" />
+            {% endif %}
+        </div>
+    </div>
+        {% endfor %}
+        <button type="submit" class="btn btn-success">Enviar</button>
+</form>

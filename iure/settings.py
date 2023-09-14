@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+MERCADOPAGO_CLIENT_ID = '6379049892624308'
+MERCADOPAGO_CLIENT_SECRET = 'DC4qG7eoUBPTMrkWK6t5Qqlij2mFSaFk'
 
 # Application definition
 
@@ -86,7 +88,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'iure',
         'USER': 'root',
-        'PASSWORD': 'Rocky19977.',
+        'PASSWORD': '261093',
         'HOST': 'localhost',
         'PORT': '3306',
     }

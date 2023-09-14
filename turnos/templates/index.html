@@ -1,44 +1,51 @@
 {% load static%}
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="{%static 'style.css'%}">
     <link rel="stylesheet" href="{% static 'wow/animate.css' %}">
     <link rel="stylesheet" href="{% static 'whatsapp.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-  </head>
-  <body data-bs-target="#barraNavegacion" data-bs-spy="scroll">
+</head>
+
+<body data-bs-target="#barraNavegacion" data-bs-spy="scroll">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <a href="https://api.whatsapp.com/send?phone=5493855704708&text=hola%20banegas" class="float" target="_blank">
-    <i class="fa fa-whatsapp my-float"></i>
+        <i class="fa fa-whatsapp my-float"></i>
     </a>
     <header>
-        <nav class="navbar navbar-light bg-light navbar-expand-lg fixed-top"  id="barraNavegacion">
+        <nav class="navbar navbar-light bg-light navbar-expand-lg fixed-top" id="barraNavegacion">
             <div class="container-fluid">
                 <div class="col">
                     <a class="navbar-brand" href="#">
-                      <img src="{% static 'assets/isotipo color principal-8.png' %}" alt="IURE" width="auto" height="64" >                                
+                        <img src="{% static 'assets/isotipo color principal-8.png' %}" alt="IURE" width="auto"
+                            height="64">
                     </a>
                 </div>
-                <!-- boton -->   
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false">
+                <!-- boton -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                    aria-controls="menu" aria-expanded="false">
                     <span class="navbar-toggler-icon"></span>
-                </button>                 
+                </button>
                 <div class="collapse navbar-collapse" id="menu">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a href="#row-sobreNosotros" class="nav-link">QUIENES SOMOS</a></li>
-                        <li class="nav-item"><a href="#row-presentacion" class="nav-link">NUESTROS PROFESIONALES</a></li>
+                        <li class="nav-item"><a href="#row-presentacion" class="nav-link">NUESTROS PROFESIONALES</a>
+                        </li>
                         <li class="nav-item"><a href="#row-docNecesaria" class="nav-link">PREGUNTAS FRECUENTES</a></li>
-                        <button class="btn" onclick="location.href='#row-contactanos'" id="btnContactoNav"> ¡Contactanos!</button>
+                        <button class="btn" onclick="location.href='#row-contactanos'" id="btnContactoNav">
+                            ¡Contactanos!</button>
                     </ul>
                 </div>
-                    <!-- <ul>
+                <!-- <ul>
                          <li>                             
                              <a href="#row-sobreNosotros" style="text-decoration:none">QUIENES SOMOS</a>
                          </li>
@@ -54,14 +61,15 @@
                         </li>
                     </ul> -->
             </div>
-          </nav>
+        </nav>
         <div class="container-fluid">
             <div class="row">
                 <div class="title ml-3">
                     <div class="wow fadeInDown">
                         Ciudadanías italianas <br> por vía judicial <br>
-                        <button class="btn mt-3" id="btnContacto" onclick="location.href='#row-contactanos'">¡Contactanos!</button>                                    
-                        </div>
+                        <button class="btn mt-3" id="btnContacto"
+                            onclick="location.href='#row-contactanos'">¡Contactanos!</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -72,49 +80,62 @@
                 <div class="row">
                     <div class="col-md-3 text-center">
                         <div class="logo-circular-img">
-                            <div class="wow fadeInDown">                                
-                                <img src="{% static 'assets/isotipo color principal-100.jpg' %}" class="img-fluid" alt="logoSobreNosotros">
-                                </div>
+                            <div class="wow fadeInDown">
+                                <img src="{% static 'assets/isotipo color principal-100.jpg' %}" class="img-fluid"
+                                    alt="logoSobreNosotros">
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-9 align-self-center">
                         <div class="row">
                             <h2 class="mb-3">Quienes somos</h2>
                         </div>
-                        <h4 class="mt-3" id="descripcion-iure">Contamos con abogados capacitados y experimentados en el derecho italiano, con quienes trabajamos arduamente para lograr que nuestros clientes puedan obtener su ciudadanía italiana de manera sencilla y sin la necesidad de viajar a Italia. <br> Con nuestro servicio, puedes obtener tu ciudadanía italiana desde la comodidad de tu hogar</h4>
+                        <h4 class="mt-3" id="descripcion-iure">Contamos con abogados capacitados y experimentados en el
+                            derecho italiano, con quienes trabajamos arduamente para lograr que nuestros clientes puedan
+                            obtener su ciudadanía italiana de manera sencilla y sin la necesidad de viajar a Italia.
+                            <br> Con nuestro servicio, puedes obtener tu ciudadanía italiana desde la comodidad de tu
+                            hogar
+                        </h4>
                     </div>
                 </div>
-            </div>        
-        </div>            
-
-        <div class="row pt-5" id="row-presentacion">  
-            <div class="container-fluid text-center mb-3">
-                <div class="row">
-                    <h1 class="font-weight-bold mb-3">Nuestros profesionales</h1>           
-                    <h4>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore vitae voluptatibus placeat molestiae vel sequi atque fuga sunt. </h4>                    
-                </div>
-                <div class="row mt-4">
-                    <div class="col align-items-center">  
-                        <div class="wow slideInLeft"> 
-                            <img src="{% static 'assets/image-cracked.avif' %}" class="circular-img img-fluid" alt="Abogado">                        
-                            </div>
-                        
-                        <h4 class="mt-4">LOREM IPSUM</h4>
-                        <p class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam at ea minima voluptate dicta sunt saepe iste nam totam quae sint sequi vero hic, ratione aut, soluta id veniam voluptatibus?</p>
-                    </div>
-                    <div class="col align-items-center">
-                        <div class="wow slideInRight">                            
-                            <img src="{% static 'assets/image-cracked.avif' %}" class="circular-img img-fluid" alt="Abogado">
-                            </div>
-                        
-                        <h4 class="mt-4">LOREM IPSUM</h4>
-                        <p class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero reprehenderit eius alias dolorem voluptatibus pariatur eveniet possimus hic, adipisci expedita. Porro quisquam, enim voluptatem alias sequi inventore similique fugiat sunt?</p>
-                    </div>
-                </div>  
             </div>
         </div>
-        
-        
+
+        <div class="row pt-5" id="row-presentacion">
+            <div class="container-fluid text-center mb-3">
+                <div class="row">
+                    <h1 class="font-weight-bold mb-3">Nuestros profesionales</h1>
+                    <h4>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore vitae voluptatibus placeat
+                        molestiae vel sequi atque fuga sunt. </h4>
+                </div>
+                <div class="row mt-4">
+                    <div class="col align-items-center">
+                        <div class="wow slideInLeft">
+                            <img src="{% static 'assets/image-cracked.avif' %}" class="circular-img img-fluid"
+                                alt="Abogado">
+                        </div>
+
+                        <h4 class="mt-4">LOREM IPSUM</h4>
+                        <p class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam at ea minima
+                            voluptate dicta sunt saepe iste nam totam quae sint sequi vero hic, ratione aut, soluta id
+                            veniam voluptatibus?</p>
+                    </div>
+                    <div class="col align-items-center">
+                        <div class="wow slideInRight">
+                            <img src="{% static 'assets/image-cracked.avif' %}" class="circular-img img-fluid"
+                                alt="Abogado">
+                        </div>
+
+                        <h4 class="mt-4">LOREM IPSUM</h4>
+                        <p class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero reprehenderit eius
+                            alias dolorem voluptatibus pariatur eveniet possimus hic, adipisci expedita. Porro quisquam,
+                            enim voluptatem alias sequi inventore similique fugiat sunt?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <!-- <div class="container-fluid">
             <div class="row">
                 <div class="col-md-3 text-center">
@@ -128,69 +149,99 @@
                     </div> -->
 
 
-        <div class="row py-5" id="row-docNecesaria">   
+        <div class="row py-5" id="row-docNecesaria">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-3 p-3">
-                        <div class="wow fadeInDown">                            
+                        <div class="wow fadeInDown">
                             <h3>Preguntas Frecuentes</h3>
                             <img src="{% static 'assets/pensando.svg.svg' %}" alt="thinking" width="auto" height="300">
-                            </div>
-                        
+                        </div>
                     </div>
                     <div class="col-md-9 align-self-center">
-                    <div class="wow fadeInUp">
+                        <div class="wow fadeInUp">
                             <div class="accordion" id="accordionExample">
                                 <div class="accordion-item">
-                                  <h2 class="accordion-header">
-                                    <button class="accordion-button" id="btnAcordeon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                      ¿Por dónde empiezo?
-                                    </button>
-                                  </h2>
-                                  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        •El primer paso es recabar información acerca de tu antepasado italiano (nombre y apellido, fecha y lugar de nacimiento, matrimonio y defunción, nombre de los padres, entre otros datos relevantes), esta información nos va a permitir obtener las partidas correspondientes para poder avanzar hacia el siguiente paso. <br>
-                                        •El segundo paso, y ¡MUY importante!, es la solicitud del CNN (Certificado de no naturalización), este certificado nos va a permitir obtener información acerca de si tu antepasado italiano se naturalizó o no como ciudadano argentino. Se trata de un paso muy importante ya que de esto depende la posibilidad de obtener o no tu ciudadanía. <br>                                    
-                                        •¿Cómo tramito todo esto? De eso nos encargamos nosotros!
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" id="btnAcordeon" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            ¿Por dónde empiezo?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            •El primer paso es recabar información acerca de tu antepasado italiano
+                                            (nombre y apellido, fecha y lugar de nacimiento, matrimonio y defunción,
+                                            nombre de los padres, entre otros datos relevantes), esta información nos va
+                                            a permitir obtener las partidas correspondientes para poder avanzar hacia el
+                                            siguiente paso. <br>
+                                            •El segundo paso, y ¡MUY importante!, es la solicitud del CNN (Certificado
+                                            de no naturalización), este certificado nos va a permitir obtener
+                                            información acerca de si tu antepasado italiano se naturalizó o no como
+                                            ciudadano argentino. Se trata de un paso muy importante ya que de esto
+                                            depende la posibilidad de obtener o no tu ciudadanía. <br>
+                                            •¿Cómo tramito todo esto? De eso nos encargamos nosotros!
+                                        </div>
                                     </div>
-                                  </div>
                                 </div>
                                 <div class="accordion-item">
-                                  <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" id="btnAcordeon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                      ¿Qué documentación necesito?
-                                    </button>
-                                  </h2>
-                                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        •Acta de nacimiento, matrimonio y defunción del AVO (Antepasado nacido en Italia). <br>
-                                        •Certificado de no naturalización del AVO (CNN/CNE). <br>                                    
-                                        •Actas de nacimiento, matrimonio y defunción (estos dos últimos, sólo en caso de corresponder) de todos los integrantes de la línea de descendencia hasta llegar a los requirentes de la Ciudadanía. <br>
-                                        •Capturas de pantalla de los intentos para solicitar un turno en el consulado (sean de error de página, de negativa o de turnos demasiado lejanos). Se trata de un requisito exclusivo para la vía judicial por falta de turnos, no así para la vía materna. <br>                                    
-                                        •Poder para juicios.                                    
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" id="btnAcordeon" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                            ¿Qué documentación necesito?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            •Acta de nacimiento, matrimonio y defunción del AVO (Antepasado nacido en
+                                            Italia). <br>
+                                            •Certificado de no naturalización del AVO (CNN/CNE). <br>
+                                            •Actas de nacimiento, matrimonio y defunción (estos dos últimos, sólo en
+                                            caso de corresponder) de todos los integrantes de la línea de descendencia
+                                            hasta llegar a los requirentes de la Ciudadanía. <br>
+                                            •Capturas de pantalla de los intentos para solicitar un turno en el
+                                            consulado (sean de error de página, de negativa o de turnos demasiado
+                                            lejanos). Se trata de un requisito exclusivo para la vía judicial por falta
+                                            de turnos, no así para la vía materna. <br>
+                                            •Poder para juicios.
+                                        </div>
                                     </div>
-                                  </div>
                                 </div>
                                 <div class="accordion-item">
-                                  <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" id="btnAcordeon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                      ¿Cuándo corresponde tramitar la ciudadanía por vía judicial?
-                                    </button>
-                                  </h2>
-                                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        Actualmente podemos decir que corresponde tramitarla en cualquier momento y en todos los casos.
-                                        Anteriormente la ciudadanía por vía judicial era exclusiva para la “vía materna” que se da cuando el hijo (hombre o mujer) de la primera mujer que se encuentre dentro de la línea de descendencia, haya nacido antes del 1 de enero de 1948. Hoy por hoy, ante la real IMPOSIBILIDAD de conseguir turnos en los consulados o la lentitud de los mismos, y ante lo costoso en lo económico y personal que resulta viajar a Italia a tramitar nuestra ciudadania, podemos realizarla judicialmente con el patrocinio de profesionales especializados al efecto en un TIEMPO COHERENTE Y EFECTIVO.
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" id="btnAcordeon" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
+                                            ¿Cuándo corresponde tramitar la ciudadanía por vía judicial?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Actualmente podemos decir que corresponde tramitarla en cualquier momento y
+                                            en todos los casos.
+                                            Anteriormente la ciudadanía por vía judicial era exclusiva para la “vía
+                                            materna” que se da cuando el hijo (hombre o mujer) de la primera mujer que
+                                            se encuentre dentro de la línea de descendencia, haya nacido antes del 1 de
+                                            enero de 1948. Hoy por hoy, ante la real IMPOSIBILIDAD de conseguir turnos
+                                            en los consulados o la lentitud de los mismos, y ante lo costoso en lo
+                                            económico y personal que resulta viajar a Italia a tramitar nuestra
+                                            ciudadania, podemos realizarla judicialmente con el patrocinio de
+                                            profesionales especializados al efecto en un TIEMPO COHERENTE Y EFECTIVO.
+                                        </div>
                                     </div>
-                                  </div>
                                 </div>
-                              </div>
+                            </div>
                         </div>
-                    </div>                                       
+                    </div>
                 </div>
-            </div>         
-                                
             </div>
+
+        </div>
         </div>
         <div class="row pt-5 mb-3" id="row-turnos">
             <div class="container-fluid text-center mb-3">
@@ -198,32 +249,10 @@
                     <h2>¿Todavía tenes dudas?<br></h2>
                     <h3><small>Reserva tu turno con uno de nuestros profesionales</small>
                     </h3>
-                    <button class="btn mt-3" id="btnTurnos">Turnos</button>                                    
+                    <a href="{% url 'success' %}" class="btn" id="btnTurnos">turnos</a>
                 </div>
             </div>
         </div>
-        <div class="modal fade" id="modalCRUD" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="edicion"></h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <form id="formClientes" method="post">
-                    <div class="modal-body">
-                        <div class="form-group" id="form-edcion">
-                            {% include 'turnos.html' %}
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                            <button type="submit" id="btnSubmit" class="btn btn-success">Guardar</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
         <div class="row" id="row-contactanos">
             <div class="container-fluid text-center mb-3">
                 <div class="row">
@@ -235,134 +264,114 @@
                     <div class="card col-sm-6 p-3">
                         <form action="https://formspree.io/f/xpzgqbap" method="POST">
                             <div class="mb-2">
-                               <label for="nombre">Nombre y Apellido</label>
-                               <input type="text" class="form-control" name="nombre" id="nombre" placeholder="ej: Rodrigo">
+                                <label for="nombre">Nombre y Apellido</label>
+                                <input type="text" class="form-control" name="nombre" id="nombre"
+                                    placeholder="ej: Rodrigo">
                             </div>
                             <div class="mb-2">
                                 <label for="email">Email</label>
-                                <input type="text" class="form-control" name="email" id="email" placeholder="ej: iure@ciudadanias.com">
-                             </div>
-                             <div class="mb-2">
+                                <input type="text" class="form-control" name="email" id="email"
+                                    placeholder="ej: iure@ciudadanias.com">
+                            </div>
+                            <div class="mb-2">
                                 <label for="telefono">Teléfono</label>
-                                <input type="telefono" class="form-control" name="telefono" id="telefono" placeholder="ej: +54 9 3855704708">
-                             </div>
-                             <div class="mb-2">
+                                <input type="telefono" class="form-control" name="telefono" id="telefono"
+                                    placeholder="ej: +54 9 3855704708">
+                            </div>
+                            <div class="mb-2">
                                 <label for="mensaje">Mensaje</label>
-                                <textarea name="mensaje" id="mensaje" cols="25" rows="8" class="form-control"> Hola, me gustaría reservar un turno para realizar una consulta</textarea>
-                             </div>
-                             <div class="mb-2">
+                                <textarea name="mensaje" id="mensaje" cols="25" rows="8"
+                                    class="form-control"> Hola, me gustaría reservar un turno para realizar una consulta</textarea>
+                            </div>
+                            <div class="mb-2">
                                 <button class="btn" id="btnEnviarForm">Enviar</button>
-                             </div>
+                            </div>
                         </form>
                     </div>
                 </div>
             </div>
-        </div>        
+        </div>
     </main>
-        <footer class="text-dark pt-5 pb-4">
-            <div class="conteiner">
-                <div class="row text-center text-md-start">
-                    <div class="col-md-3 text-center">
+    <footer class="text-dark pt-5 pb-4">
+        <div class="conteiner">
+            <div class="row text-center text-md-start">
+                <div class="col-md-3 text-center">
+                    <div>
                         <div>
-                            <div>
-                                <img src="{% static 'assets/logo color principal-8.png' %}" class="img-fluid"
-                                    alt="logoSobreNosotros">
-                            </div>
+                            <img src="{% static 'assets/logo color principal-8.png' %}" class="img-fluid"
+                                alt="logoSobreNosotros">
                         </div>
                     </div>
-                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                        <h5 class="text-uppercase mb-4 font-weight-bold text-dark-emphasis">Nostros</h5>
-                        <hr class="mb-4">
-                        <p class="justify-content-around">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto rem sit excepturi facilis
-                            inventore sapiente esse illum? Rerum deserunt tempora minus voluptas quos distinctio
-                            perferendis, magnam tenetur ea ipsa aliquid.
-                        </p>
-                    </div>
-                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                        <h5 class="text-uppercase mb-4 font-weight-bold text-dark-emphasis">Tramites</h5>
-                        <hr class="mb-4">
-                        <p><a href="#">Ciudadania</a></p>
-                        <p><a href="#">Armado de carpetas</a></p>
-                        <p><a href="#">Juicios</a></p>
-                        <p><a href="#">Ayuda</a></p>
-                    </div>
-                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                        <h5 class="text-uppercase mb-4 font-weight-bold text-dark-emphasis">Contacto</h5>
-                        <hr class="mb-4">
-                        <p>
-                            <li class="fas fa-home me-3"></li> Santiago del Estero
-                        </p>
-                        <p>
-                            <li class="fas fa-envelope me-3"></li> iure@gmail.com</p>
-                                <p>
-                                    <li class="fas fa-phone me-3"></li> +54-11-63019724
-                                </p>
-                    </div>
+                </div>
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-dark-emphasis">Nostros</h5>
                     <hr class="mb-4">
-                    <div class="text-center mb-2">
-                        <p>
-                            Copyright Todos los derechos reservados
-                            <a href="#">
-                                <strong class="text-primary">Innervance</strong>
+                    <p class="justify-content-around">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto rem sit excepturi facilis
+                        inventore sapiente esse illum? Rerum deserunt tempora minus voluptas quos distinctio
+                        perferendis, magnam tenetur ea ipsa aliquid.
+                    </p>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-dark-emphasis">Tramites</h5>
+                    <hr class="mb-4">
+                    <p><a href="#">Ciudadania</a></p>
+                    <p><a href="#">Armado de carpetas</a></p>
+                    <p><a href="#">Juicios</a></p>
+                    <p><a href="#">Ayuda</a></p>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold text-dark-emphasis">Contacto</h5>
+                    <hr class="mb-4">
+                    <p>
+                        <li class="fas fa-home me-3"></li> Santiago del Estero
+                    </p>
+                    <p>
+                        <li class="fas fa-envelope me-3"></li> iure@gmail.com
+                    </p>
+                    <p>
+                        <li class="fas fa-phone me-3"></li> +54-11-63019724
+                    </p>
+                </div>
+                <hr class="mb-4">
+                <div class="text-center mb-2">
+                    <p>
+                        Copyright Todos los derechos reservados
+                        <a href="#">
+                            <strong class="text-primary">Innervance</strong>
+                        </a>
+                    </p>
+                </div>
+                <div class="text-center">
+                    <ul class="list-unstyled list-inline">
+                        <li class="list-inline-item">
+                            <a href="#" class="text-dark">
+                                <i class="fab fa-instagram"></i>
                             </a>
-                        </p>
-                    </div>
-                    <div class="text-center">
-                        <ul class="list-unstyled list-inline">
-                            <li class="list-inline-item">
-                                <a href="#" class="text-dark">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#" class="text-dark">
-                                    <i class="fab fa-whatsapp"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="text-dark">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
+        </div>
     </footer>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
     <script src="{% static 'wow/wow.min.js' %}"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'index.js' %}"></script>
 
-    
-              <script>
-              new WOW().init();
-              </script>
+
+
     <script>
-        // const $form = document.querySelector('#form')
-
-        // $form.addEventListener('submit', handleSubmit)
-
-        // async function handleSubmit(event) {
-        //     event.preventDefault()
-        //     const form = new FormData(this)
-        //     const response = await fetch(this.action, {
-        //         method: this.method,
-        //         body: form,
-        //         headers: {
-        //             'Accept': 'application/json'
-        //         }
-        //     })
-        //     if (response.ok) {
-        //         this.reset()
-        //         alert('Gracias por contactarnos, te escribiremos pronto!')
-        //     }
-        // }
-        $("#btnTurnos").click(function () {
-    $("#formClientes").trigger("reset");
-    $(".modal-header").css("background-color", "#28a745");
-    $(".modal-header").css("color", "white");
-    $(".modal-title").text("Rellena los campos de contacto");
-    $("#btnSubmit").text("Guardar");
-    $("#formClientes").attr("data-action", "guardar");
-    $("#modalCRUD").modal("show");
-});
+        new WOW().init();
     </script>
-    </body>
+</body>
+
 </html>
