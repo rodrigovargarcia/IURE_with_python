@@ -283,7 +283,7 @@ header a{
 
 /* ROW TURNOS */
 
-#btnTurnos{
+/* #btnTurnos{
     background-color: #dad1c9;
     color: #0d3745;
     font-family: Modernist;
@@ -295,4 +295,40 @@ header a{
 
 #btnTurnos:hover{
     background-color: #e6e6e6;
+} */
+
+#row-turnos{
+    background-color: #dad1c9;
+    background-size: cover;    
+    position: relative;
+    overflow: hidden;
+    /* height: 650px; */
+}
+
+footer{
+    background-image: url(/turnos/static/assets/pexels-antonio-filigno-10351722.jpg);
+    background-size: cover;
+    /* height: 650px; */
+    position: relative;   
+    overflow-x: hidden; 
+}
+
+#btnContinuarTurno{
+    background-color:#0d3745;
+    color:#dad1c9;
+    font-family: Modernist;
+    font-weight: bold;
+    font-size: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#btnContinuarTurno:hover{
+    color: #0d3745;
+    background-color: #e6e6e6;
+}
+
+#tituloTurno{
+    font-family: ClairePalmer;
+    font-size: 3rem;
 }

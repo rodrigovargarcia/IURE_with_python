@@ -240,60 +240,31 @@
                     </div>
                 </div>
             </div>
-
         </div>
-        </div>
-        <div class="row pt-5 mb-3" id="row-turnos">
-            <div class="container-fluid text-center mb-3">
-                <div class="col align-self-center py-5">
-                    <h2>¿Todavía tenes dudas?<br></h2>
-                    <h3><small>Reserva tu turno con uno de nuestros profesionales</small>
-                    </h3>
-                    <a href="{% url 'success' %}" class="btn" id="btnTurnos">turnos</a>
-                </div>
-            </div>
-        </div>
-        <div class="row" id="row-contactanos">
+        <div class="row py-5" id="row-turnos">
             <div class="container-fluid text-center mb-3">
                 <div class="row">
-                    <h2 class="mt-4">Contactanos</h2>
-                </div>
-            </div>
-            <div class="container-fluid text-center mb-3">
-                <div class="d-flex justify-content-center">
-                    <div class="card col-sm-6 p-3">
-                        <form action="https://formspree.io/f/xpzgqbap" method="POST">
-                            <div class="mb-2">
-                                <label for="nombre">Nombre y Apellido</label>
-                                <input type="text" class="form-control" name="nombre" id="nombre"
-                                    placeholder="ej: Rodrigo">
+                    <div class="col align-self-center py-5">
+                        <h2 id="tituloTurno">¿Todavía tenes dudas?<br></h2>
+                        <h3><small>Reserva tu turno con uno de nuestros profesionales</small>
+                        </h3>
+                    </div>                    
+                    {% include 'form.html' %}      
+                    <div class="collapse" id="collapseExample">
+                        <p>Una vez que haya llenado el formulario debe realizar el pago a traves de Mercado Pago para <br> que su turno
+                            sea registrado</p>                        
+                        <div class="row justify-content-center">
+                            <div class="col-sm-4">
+                                <div id="wallet_container"></div>
                             </div>
-                            <div class="mb-2">
-                                <label for="email">Email</label>
-                                <input type="text" class="form-control" name="email" id="email"
-                                    placeholder="ej: iure@ciudadanias.com">
-                            </div>
-                            <div class="mb-2">
-                                <label for="telefono">Teléfono</label>
-                                <input type="telefono" class="form-control" name="telefono" id="telefono"
-                                    placeholder="ej: +54 9 3855704708">
-                            </div>
-                            <div class="mb-2">
-                                <label for="mensaje">Mensaje</label>
-                                <textarea name="mensaje" id="mensaje" cols="25" rows="8"
-                                    class="form-control"> Hola, me gustaría reservar un turno para realizar una consulta</textarea>
-                            </div>
-                            <div class="mb-2">
-                                <button class="btn" id="btnEnviarForm">Enviar</button>
-                            </div>
-                        </form>
-                    </div>
+                        </div>                        
+                    </div>              
                 </div>
             </div>
         </div>
     </main>
-    <footer class="text-dark pt-5 pb-4">
-        <div class="conteiner">
+     <footer class="text-dark pt-5 pb-4">
+        <div class="container-fluid">
             <div class="row text-center text-md-start">
                 <div class="col-md-3 text-center">
                     <div>
@@ -345,12 +316,12 @@
                 <div class="text-center">
                     <ul class="list-unstyled list-inline">
                         <li class="list-inline-item">
-                            <a href="#" class="text-dark">
+                            <a href="https://www.instagram.com/iure.ciudadanias/?ref=SRocker" class="text-dark">
                                 <i class="fab fa-instagram"></i>
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="#" class="text-dark">
+                            <a href="https://api.whatsapp.com/send?phone=5493855704708&text=hola%20banegas" class="text-dark">
                                 <i class="fab fa-whatsapp"></i>
                             </a>
                         </li>
@@ -367,6 +338,22 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{% static 'index.js' %}"></script>
 
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+            <script>
+                const mp = new MercadoPago('APP_USR-4aa51e16-eb7a-48dd-89cd-9dd6e0e85e44',{
+                    locale: 'es-AR'
+                });
+                const bricksBuilder = mp.bricks();
+                const preferenceId = "{{ preference.id }}"
+                console.log(preferenceId)
+        
+                mp.bricks().create("wallet", "wallet_container", {
+                    initialization: {
+                        preferenceId: preferenceId,
+                        redirectMode: "modal",
+                    },
+                });
+            </script>
 
 
     <script>
