@@ -7,14 +7,17 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Bootstrap CSS v5.2.1 -->
+    <link rel="stylesheet" href="{%static 'style.css'%}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 </head>
 
 <body>
-    <header id="headerMaster">
+    <header>
         <!-- place navbar here -->
         <!-- <header> -->
         <div class="row" id="navbarMaster">
@@ -38,46 +41,93 @@
         <!-- </header> -->
     </header>
     <main>
-        <div class="container mt-5 mb-3">
-            <div class="row text-center">
-                <h2 style="margin-top: 100px;">Turnos</h2>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-6 text-center">
-                    <p>Si desea reservar un turno con nuestros profesionales, por favor complete el siguiente formulario y realice el pago.</p>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-8">
-                    <div class="card">
-                        <div class="card-body justify-content-center">
-                                <!-- {% include 'form.html' %} -->
-                        </div>
+        <div class="row pt-5" id="row-pagoConfirmado">
+            <div class="container-fluid mt-3">
+                <div class="row mt-3 justify-content-center align-items-center">
+                    <div class="col-6 text-center">
+                        <h3>Su turno fue confirmado <br> lo esperamos!</h3>
+                    </div>
+                    <div class="col-6 text-center">
+                        <img src="{% static 'assets/Success-svg.svg' %}" id="imgSuccess" alt="">
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-6">
-                    <div id="wallet_container"></div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-6 mb-3">
-                    <div class="d-grid gap-2">
-                        <a href="{% url 'home' %}" class="btn btn-danger mt-3" style="height: 48px;" >Cancelar</a>
+                <div class="row mt-3 align-items-center">
+                    <div class="col-6 text-center">
+                        <a href="{% url 'home' %}" type="button" class="btn btn-secondary">Continuar</a>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-    <footer>
         <!-- place footer here -->
+        <footer class="text-dark pt-5 pb-4">
+            <div class="container-fluid">
+                <div class="row text-center text-md-start">
+                    <div class="col-md-3 text-center">
+                        <div>
+                            <div>
+                                <img src="{% static 'assets/logo color principal-8.png' %}" class="img-fluid"
+                                    alt="logoSobreNosotros">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h5 class="text-uppercase mb-4 font-weight-bold text-dark-emphasis">Nostros</h5>
+                        <hr class="mb-4">
+                        <p class="justify-content-around">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto rem sit excepturi facilis
+                            inventore sapiente esse illum? Rerum deserunt tempora minus voluptas quos distinctio
+                            perferendis, magnam tenetur ea ipsa aliquid.
+                        </p>
+                    </div>
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h5 class="text-uppercase mb-4 font-weight-bold text-dark-emphasis">Tramites</h5>
+                        <hr class="mb-4">
+                        <p><a href="#">Ciudadania</a></p>
+                        <p><a href="#">Armado de carpetas</a></p>
+                        <p><a href="#">Juicios</a></p>
+                        <p><a href="#">Ayuda</a></p>
+                    </div>
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h5 class="text-uppercase mb-4 font-weight-bold text-dark-emphasis">Contacto</h5>
+                        <hr class="mb-4">
+                        <p>
+                            <li class="fas fa-home me-3"></li> Santiago del Estero
+                        </p>
+                        <p>
+                            <li class="fas fa-envelope me-3"></li> iure@gmail.com
+                        </p>
+                        <p>
+                            <li class="fas fa-phone me-3"></li> +54-11-63019724
+                        </p>
+                    </div>
+                    <hr class="mb-4">
+                    <div class="text-center mb-2">
+                        <p>
+                            Copyright <strong>IURE</strong> Todos los derechos reservados <br>
+                            Designed & Developed by <br>
+                            <a href="#">
+                                <strong class="text-primary">El oshe Y el Chancho</strong>
+                            </a>
+                        </p>
+                    </div>
+                    <div class="text-center">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item">
+                                <a href="https://www.instagram.com/iure.ciudadanias/?ref=SRocker" class="text-dark">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://api.whatsapp.com/send?phone=5493855704708&text=hola%20banegas"
+                                    class="text-dark">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
     </footer>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -87,22 +137,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
         integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
         </script>
-            <script src="https://sdk.mercadopago.com/js/v2"></script>
-            <script>
-                const mp = new MercadoPago('APP_USR-4aa51e16-eb7a-48dd-89cd-9dd6e0e85e44',{
-                    locale: 'es-AR'
-                });
-                const bricksBuilder = mp.bricks();
-                const preferenceId = "{{ preference.id }}"
-                console.log(preferenceId)
-        
-                mp.bricks().create("wallet", "wallet_container", {
-                    initialization: {
-                        preferenceId: preferenceId,
-                        redirectMode: "modal",
-                    },
-                });
-            </script>
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-header{
+#headerIndex{
     background-image: url(/static/assets/braden-collum-75XHJzEIeUc-unsplash.jpg);
     background-size: cover;
     height: 650px;
@@ -106,7 +106,7 @@ header a{
     width:400px;    
 }
 
-#row-presentacion h1{
+#row-presentacion h2{
     font-size: 3rem;
     font-family: ClairePalmer;
     margin-left: 50%;
@@ -359,14 +359,22 @@ footer{
     transform: rotateY(180deg);
 }
 
+.card-front{
+    align-items: center;
+}
+
 .card {
+    display: flex;
     position: absolute;
     max-width: 430px;
     max-height: 380px;
+    min-width: 250px;
     height: 100%;
     width: 100%;
     transition: all 0.9s;
     backface-visibility: hidden;
+    align-items: center;
+    justify-content: center;
 }
 
 .card-img{
@@ -391,17 +399,17 @@ footer{
 }
 
 #card-videocall{
-    background-color: rgba(246, 249, 237, 0.2);
+    background-color: rgba(245, 244, 242, 0.7);
 }
 
 #card-translator{
-    background-color: rgba(246, 249, 237, 0.2);
+    background-color: rgba(245, 244, 242, 0.7);
 }
 #card-docum{
-    background-color: rgba(246, 249, 237, 0.2);
+    background-color: rgba(245, 244, 242, 0.7);
 }
 #card-travel{
-background-color: rgba(246, 249, 237, 0.2);
+background-color: rgba(245, 244, 242, 0.7);
 }
 /* #row-nuestrosServicios{
     background-image: url(/static/assets/pexels-jéshoots-7522.jpg);
@@ -423,7 +431,11 @@ background-color: rgba(246, 249, 237, 0.2);
     background-position: center center;
     position: relative; /* Para que el pseudo-elemento se posicione correctamente */
 }
-
+#row-nuestrosServicios h2{
+    color: #03213a;
+    font-size: 3rem;
+    font-family: ClairePalmer;
+}
 /* Pseudo-elemento para crear un fondo gris semi-transparente */
 #row-nuestrosServicios::before {
     content: "";
@@ -446,4 +458,16 @@ background-color: rgba(246, 249, 237, 0.2);
     width: 100%;
     height: 100%;
     z-index: -1; /* Coloca la imagen de fondo por detrás del pseudo-elemento */
+}
+
+#row-pagoConfirmado{
+    background-color: #e6e6e6;
+    height: 550px;
+    overflow-x: hidden;
+    /* background-size: 20rem; */
+}
+
+#imgSuccess{
+    max-width: 350px;
+    max-height: auto;
 }

@@ -51,7 +51,7 @@ def proceso_pago():
             }
         ],
             "back_urls": {
-        "success": "http://127.0.0.1:8000/confirmar/",
+        "success": "https://m5k4s9ps-8000.brs.devtunnels.ms/confirmar/",
         "failure": "http://127.0.0.1:8000/failure",
         "pending": "https://127.0.0.1:8000/pendings"
     },

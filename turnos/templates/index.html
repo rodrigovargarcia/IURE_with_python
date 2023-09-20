@@ -21,7 +21,7 @@
     <a href="https://api.whatsapp.com/send?phone=5493855704708&text=hola%20banegas" class="float" target="_blank">
         <i class="fa fa-whatsapp my-float"></i>
     </a>
-    <header>
+    <header id="headerIndex">
         <nav class="navbar navbar-light bg-light navbar-expand-lg fixed-top" id="barraNavegacion">
             <div class="container-fluid">
                 <div class="col">
@@ -38,11 +38,11 @@
                 <div class="collapse navbar-collapse" id="menu">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a href="#row-sobreNosotros" class="nav-link">QUIENES SOMOS</a></li>
-                        <li class="nav-item"><a href="#row-presentacion" class="nav-link">NUESTROS PROFESIONALES</a>
-                        </li>
+                        <li class="nav-item"><a href="#row-presentacion" class="nav-link">NUESTROS PROFESIONALES</a></li>
+                        <li class="nav-item"><a href="#row-nuestrosServicios" class="nav-link">NUESTROS SERVICIOS</a></li>
                         <li class="nav-item"><a href="#row-docNecesaria" class="nav-link">PREGUNTAS FRECUENTES</a></li>
-                        <button class="btn" onclick="location.href='#row-contactanos'" id="btnContactoNav">
-                            ¡Contactanos!</button>
+                        <button class="btn" onclick="location.href='#row-turnos'" id="btnContactoNav">
+                            Solicita un turno</button>
                     </ul>
                 </div>
                 <!-- <ul>
@@ -68,7 +68,7 @@
                     <div class="wow fadeInDown">
                         Ciudadanías italianas <br> por vía judicial <br>
                         <button class="btn mt-3" id="btnContacto"
-                            onclick="location.href='#row-contactanos'">¡Contactanos!</button>
+                            onclick="location.href='https://api.whatsapp.com/send?phone=5493855704708&text=hola%20banegas'">¡Contactanos!</button>
                     </div>
                 </div>
             </div>
@@ -104,7 +104,7 @@
         <div class="row pt-5" id="row-presentacion">
             <div class="container-fluid text-center mb-3">
                 <div class="row">
-                    <h1 class="font-weight-bold mb-3">Nuestros profesionales</h1>
+                    <h2 class="font-weight-bold mb-3">Nuestros profesionales</h2>
                     <h4>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore vitae voluptatibus placeat
                         molestiae vel sequi atque fuga sunt. </h4>
                 </div>
@@ -137,61 +137,82 @@
         <div class="row py-5" id="row-nuestrosServicios">
             <div class="container-fluid">
                 <div class="row justify-content-center mb-5">
+                    <div class="row justify-content-center mb-3 mt-3">
+                        <div class="col-6 text-center">
+                            <h2 class="font-weight-bold mb-3">Nuestros Servicios</h2>
+                        </div>
+                    </div>
                     <div class="card-grid">
-                        <div class="card-container d-flex justify-content-center align-items-center">
-                            <div class="card card-front" id="card-videocall">
-                                <img class="card-img" src="{% static 'assets/VideoCall-icon.svg' %}" alt=icon-videocall">
-                            </div>
-                            <div class="card card-back" id="card-videocall">
-                                <img class="card-img-top" src="{% static 'assets/VideoCall-svg.svg' %}" alt="svg-videocall">
-                                <div class="card-body text-center">
-                                    <p>Agenda tu consulta por videollamada <br> Ahorrá tiempo </p>
+                        <div class="wow flipInX">
+                            <div class="card-container d-flex justify-content-center align-items-center">
+                                <div class="card card-front" id="card-videocall">
+                                    <img class="card-img" src="{% static 'assets/VideoCall-icon.svg' %}"
+                                        alt=icon-videocall">
+                                </div>
+                                <div class="card card-back" id="card-videocall">
+                                    <img class="card-img-top" src="{% static 'assets/VideoCall-svg.svg' %}"
+                                        alt="svg-videocall">
+                                    <div class="card-body text-center">
+                                        <p>Agenda tu consulta por videollamada <br> Ahorrá tiempo </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="card-container d-flex justify-content-center align-items-center">
-                            <div class="card card-front" id="card-translator">
-                                <img class="card-img" src="{% static 'assets/Translator-icon.svg' %}" alt="icon-videocall">
-                            </div>
-                            <div class="card card-back" id="card-translator">
-                                <img class="card-img-top" src="{% static 'assets/Translator-svg.svg' %}" alt="svg-videocall">
-                                <div class="card-body text-center">
-                                    <p>Traducciones y apostillas</p>
+                        <div class="wow flipInX">
+                            <div class="card-container d-flex justify-content-center align-items-center">
+                                <div class="card card-front" id="card-translator">
+                                    <img class="card-img" src="{% static 'assets/Translator-icon.svg' %}"
+                                        alt="icon-videocall">
+                                </div>
+                                <div class="card card-back" id="card-translator">
+                                    <img class="card-img-top" src="{% static 'assets/Translator-svg.svg' %}"
+                                        alt="svg-videocall">
+                                    <div class="card-body text-center">
+                                        <p>Traducciones y apostillas</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row justify-content-center mb-5">
-                    <div class="card-grid">                    
-                        <div class="card-container d-flex justify-content-center align-items-center">
-                            <div class="card card-front" id="card-docum">
-                                <img class="card-img" src="{% static 'assets/Docum-icon.svg' %}" alt="icon-videocall">
-                            </div>
-                            <div class="card card-back" id="card-docum">
-                                <img class="card-img-top" src="{% static 'assets/Docum-svg.svg' %}" alt="svg-videocall">
-                                <div class="card-body text-center">
-                                    <p>Agenda tu consulta por videollamada</p>
+                    <div class="card-grid">
+                        <div class="wow flipInX">
+                            <div class="card-container d-flex justify-content-center align-items-center">
+                                <div class="card card-front" id="card-docum">
+                                    <img class="card-img" src="{% static 'assets/Docum-icon.svg' %}"
+                                        alt="icon-videocall">
+                                </div>
+                                <div class="card card-back" id="card-docum">
+                                    <img class="card-img-top" src="{% static 'assets/Docum-svg.svg' %}"
+                                        alt="svg-videocall">
+                                    <div class="card-body text-center">
+                                        <p>Agenda tu consulta por videollamada</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="card-container d-flex justify-content-center align-items-center">
-                            <div class="card card-front" id="card-travel">
-                                <img class="card-img" src="{% static 'assets/Travel-icon.svg' %}" alt="icon-videocall">
-                            </div>
-                            <div class="card card-back" id="card-travel">
-                                <img class="card-img-top" src="{% static 'assets/Travel-svg.svg' %}" alt="svg-videocall">
-                                <div class="card-body text-center">
-                                    <p>Agenda tu consulta por videollamada</p>
+                        <div class="wow flipInX">
+                            <div class="card-container d-flex justify-content-center align-items-center">
+                                <div class="card card-front" id="card-travel">
+                                    <img class="card-img" src="{% static 'assets/Travel-icon.svg' %}"
+                                        alt="icon-videocall">
+                                </div>
+                                <div class="card card-back" id="card-travel">
+                                    <img class="card-img-top" src="{% static 'assets/Travel-svg.svg' %}"
+                                        alt="svg-videocall">
+                                    <div class="card-body text-center">
+                                        <p>Agenda tu consulta por videollamada</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                    
-                    <!-- Repite el bloque de tarjetas para otros servicios -->
-                </div>
+
+                <!-- Repite el bloque de tarjetas para otros servicios -->
             </div>
+        </div>
         </div>
 
         <!-- <div class="container-fluid">
@@ -394,7 +415,9 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
@@ -416,7 +439,11 @@
                 data: datos,
                 dataType: 'json',
                 success: function (response) {
-                    console.log(response);
+                    Swal.fire(
+                        'Su turno fue agendado con éxito!',
+                        'Realice el pago para confirmar el turno',
+                        'success'
+                    )
                     mostrarErrores(response);
                 },
                 error: function (response) {
