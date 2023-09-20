@@ -332,3 +332,118 @@ footer{
     font-family: ClairePalmer;
     font-size: 3rem;
 }
+
+
+/* ----------------- CARDS ------------------ */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); /* Cuadrícula flexible */
+    gap: 20px; /* Espacio entre las tarjetas */
+}
+
+.card-container {
+    position: relative;
+    perspective: 200rem;
+    height: 380px;
+}
+
+.card-container:hover .card-front {
+    transform: rotateY(180deg);
+}
+
+.card-container:hover .card-back {
+    transform: rotateY(0deg);
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+.card {
+    position: absolute;
+    max-width: 430px;
+    max-height: 380px;
+    height: 100%;
+    width: 100%;
+    transition: all 0.9s;
+    backface-visibility: hidden;
+}
+
+.card-img{
+    max-width: 430px;
+    max-height: 350px;
+}
+.card-img-top{
+    max-width: 430px;
+    max-height: 320px;
+}
+
+/* Media queries para hacer el diseño responsive */
+@media screen and (max-width: 768px) {
+    .card-grid {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas más pequeñas */
+    }
+    
+    .card-container {
+        width: 50%; /* Ancho del contenedor */
+        margin: 0 auto; /* Esto centrará horizontalmente el contenedor */
+    }
+}
+
+#card-videocall{
+    background-color: rgba(246, 249, 237, 0.2);
+}
+
+#card-translator{
+    background-color: rgba(246, 249, 237, 0.2);
+}
+#card-docum{
+    background-color: rgba(246, 249, 237, 0.2);
+}
+#card-travel{
+background-color: rgba(246, 249, 237, 0.2);
+}
+/* #row-nuestrosServicios{
+    background-image: url(/static/assets/pexels-jéshoots-7522.jpg);
+    background-size: cover;
+} */
+
+.card-body p{
+    color: #fff;
+    font-family: Modernist;
+}
+
+
+
+/* Aplicar una imagen de fondo */
+#row-nuestrosServicios{
+    background-image: url(/static/assets/pexels-jéshoots-7522.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative; /* Para que el pseudo-elemento se posicione correctamente */
+}
+
+/* Pseudo-elemento para crear un fondo gris semi-transparente */
+#row-nuestrosServicios::before {
+    content: "";
+    background-color: rgba(128, 128, 128, 0.5); /* Color gris semi-transparente */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Aplicar un filtro de desenfoque a la imagen de fondo */
+#row-nuestrosServicios::after {
+    content: "";
+    background-image: url(/static/assets/pexels-jéshoots-7522.jpg); /* La misma imagen de fondo */
+    filter: blur(5px); /* Ajusta el valor para el nivel de desenfoque deseado */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Coloca la imagen de fondo por detrás del pseudo-elemento */
+}
