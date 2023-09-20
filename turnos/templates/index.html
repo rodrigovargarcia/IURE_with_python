@@ -306,22 +306,24 @@
                         <h2 id="tituloTurno">¿Todavía tenes dudas?<br></h2>
                         <h3><small>Reserva tu turno con uno de nuestros profesionales</small>
                         </h3>
-                    </div>                    
-                    {% include 'form.html' %}      
+                    </div>
+                    {% include 'form.html' %}
                     <div class="collapse" id="collapseExample">
-                        <p>Una vez que haya llenado el formulario debe realizar el pago a traves de Mercado Pago para <br> que su turno
-                            sea registrado</p>                        
+                        <p>Una vez que haya llenado el formulario debe realizar el pago a traves de Mercado Pago para
+                            <br> que su turno
+                            sea registrado
+                        </p>
                         <div class="row justify-content-center">
                             <div class="col-sm-4">
                                 <div id="wallet_container"></div>
                             </div>
-                        </div>                        
-                    </div>              
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
-     <footer class="text-dark pt-5 pb-4">
+    <footer class="text-dark pt-5 pb-4">
         <div class="container-fluid">
             <div class="row text-center text-md-start">
                 <div class="col-md-3 text-center">
@@ -365,9 +367,10 @@
                 <hr class="mb-4">
                 <div class="text-center mb-2">
                     <p>
-                        Copyright Todos los derechos reservados
+                        Copyright <strong>IURE</strong> Todos los derechos reservados <br>
+                        Designed & Developed by <br>
                         <a href="#">
-                            <strong class="text-primary">Innervance</strong>
+                            <strong class="text-primary">El oshe Y el Chancho</strong>
                         </a>
                     </p>
                 </div>
@@ -379,7 +382,8 @@
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="https://api.whatsapp.com/send?phone=5493855704708&text=hola%20banegas" class="text-dark">
+                            <a href="https://api.whatsapp.com/send?phone=5493855704708&text=hola%20banegas"
+                                class="text-dark">
                                 <i class="fab fa-whatsapp"></i>
                             </a>
                         </li>
@@ -398,21 +402,62 @@
     <script src="{% static 'index.js' %}"></script>
 
     <script src="https://sdk.mercadopago.com/js/v2"></script>
-            <script>
-                const mp = new MercadoPago('APP_USR-4aa51e16-eb7a-48dd-89cd-9dd6e0e85e44',{
-                    locale: 'es-AR'
-                });
-                const bricksBuilder = mp.bricks();
-                const preferenceId = "{{ preference.id }}"
-                console.log(preferenceId)
-        
-                mp.bricks().create("wallet", "wallet_container", {
-                    initialization: {
-                        preferenceId: preferenceId,
-                        redirectMode: "modal",
-                    },
-                });
-            </script>
+    <script>
+
+        //envio de datos por ajax
+        $('#btnContinuarTurno').on('click', function (e) {
+            var formulario = $('#formTurno');
+            var datos = formulario.serializeArray();
+
+
+            $.ajax({
+                url: 'http://127.0.0.1:8000/guardar/',
+                type: 'POST',
+                data: datos,
+                dataType: 'json',
+                success: function (response) {
+                    console.log(response);
+                    mostrarErrores(response);
+                },
+                error: function (response) {
+
+                }
+            })
+        });
+
+
+
+        const mp = new MercadoPago('APP_USR-4aa51e16-eb7a-48dd-89cd-9dd6e0e85e44', {
+            locale: 'es-AR'
+        });
+        const bricksBuilder = mp.bricks();
+        const preferenceId = "{{ preference.id }}"
+        console.log(preferenceId)
+
+        mp.bricks().create("wallet", "wallet_container", {
+            initialization: {
+                preferenceId: preferenceId,
+                redirectMode: "modal",
+            },
+        });
+
+        $(document).ready(function () {
+            'use strict';
+
+            // Manejar el clic en el botón
+            $('#btnContinuarTurno').on('click', function () {
+                const form = $('#formTurno')[0]; // Obtener el formulario como un elemento DOM
+
+                if (form.checkValidity()) {
+
+                } else {
+                    $(form).addClass('was-validated');
+                }
+            });
+        });
+
+
+    </script>
 
 
     <script>

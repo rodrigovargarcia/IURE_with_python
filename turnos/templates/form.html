@@ -1,35 +1,38 @@
-<form action="" method="post" class="row g-3">
+<form action="" method="post" class="row g-3" id="formTurno">
     {% csrf_token %}
+    <div id="Error">
+        
+    </div>
     <div class="col-4 text-center">
         <div class="mb-3">
             <label for="inputNombreTurno" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="inputNombreTurno">
+            <input type="text" class="form-control" id="inputNombreTurno" name="nombre" required>
         </div>
         <div class="mb-3">
             <label for="inputTelTurno" class="form-label">Teléfono</label>
-            <input type="text" class="form-control" id="inputTelTurno" placeholder="+54-">
+            <input type="text" class="form-control" id="inputTelTurno" placeholder="+54-" name="telefono" required>
         </div>
         <div class="mb-3">
-            <label for="fechaTurno" class="form-label">Fecha</label>                    
-            <input type="date" class="form-control" name="fechaTurno" placeholder="Fecha">                    
+            <label for="fechaTurno" class="form-label">Fecha</label>
+            <input type="date" class="form-control" name="fecha" placeholder="fecha" min="{{ fecha_actual }}" required>
         </div>
     </div>
     <div class="col-4 text-center">
         <div class="mb-3">
             <label for="inputApellidoTurno" class="form-label">Apellido</label>
-            <input type="text" class="form-control" id="inputApellidoTurno">
+            <input type="text" class="form-control" id="inputApellidoTurno" name="apellido" required>
         </div>
         <div class="mb-3">
-            <label for="motivoTurno" class="form-label">Motivo</label>                  
-            <select class="form-select text-center" name="motivoTurno">
+            <label for="motivoTurno" class="form-label">Motivo</label>
+            <select class="form-select text-center" name="motivo" required>
                 {% for key, value in motivos %}
                 <option value="{{ key }}">{{ value }}</option>
                 {% endfor %}
             </select>
         </div>
         <div class="mb-3">
-            <label for="horarioTurno" class="form-label">Horario</label>                  
-            <select class="form-select text-center" name="horarioTurno">
+            <label for="horarioTurno" class="form-label">Horario</label>
+            <select class="form-select text-center" name="horario" required>
                 {% for key, value in horarios %}
                 <option value="{{ key }}">{{ value }}</option>
                 {% endfor %}
@@ -39,33 +42,19 @@
     <div class="col-4 text-center">
         <div class="mb-3">
             <label for="inputEmailTurno" class="form-label">Email</label>
-            <input type="email" class="form-control" id="inputEmailTurno" placeholder="name@example.com">
+            <input type="email" class="form-control" id="inputEmailTurno" placeholder="name@example.com" name="email" required>
         </div>
-        <label for="motivoTurno" class="form-label">Profesional</label>                  
-        <select class="form-select text-center" name="motivoTurno">
+        <label for="profesionales" class="form-label">Profesional</label>
+        <select class="form-select text-center" name="profesional">
             {% for key, value in profesionales %}
             <option value="{{ key }}">{{ value }}</option>
             {% endfor %}
         </select>
         <div class="mt-5">
             <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
-            aria-expanded="false" aria-controls="collapseExample" id="btnContinuarTurno">
-            Continuar   
-        </button>    
+                aria-expanded="false" aria-controls="collapseExample" id="btnContinuarTurno">
+                Continuar
+            </button>
         </div>
     </div>
-
-    <!-- <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Selecciona el botón por su ID
-            var miBoton = document.getElementById("miBoton");
-    
-            // Agrega un evento de clic al botón
-            miBoton.addEventListener("click", function () {
-                // Realiza aquí las validaciones o acciones personalizadas
-                // Por ejemplo, puedes enviar una solicitud AJAX a tu servidor Django
-                // para realizar alguna acción o validación en el lado del servidor.
-            });
-        });
-    </script> -->
 </form>
