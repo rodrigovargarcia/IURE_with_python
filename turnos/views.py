@@ -15,7 +15,7 @@ def comprobar_formulario(request):
         formulario = TurnoForm(request.POST)
         if formulario.is_valid():
             formulario.save()
-            return JsonResponse({'success': 'Su turno fue agendado, realice el pago para confirmar'})
+            return JsonResponse({'success': 'Su turno fue agendado'})
         else:
             if '__all__' in formulario.errors:
                 fecha_error = formulario.errors.get('__all__', [])
@@ -24,7 +24,7 @@ def comprobar_formulario(request):
             if 'fecha' in formulario.errors:
                 fecha_error = formulario.errors.get('fecha', [])
                 error = fecha_error
-            return JsonResponse({'error': error})
+            return JsonResponse({'error': error}, status=405)
 
 
 def guardar_datos(request):

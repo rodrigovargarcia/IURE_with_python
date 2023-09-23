@@ -38,8 +38,10 @@
                 <div class="collapse navbar-collapse" id="menu">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a href="#row-sobreNosotros" class="nav-link">QUIENES SOMOS</a></li>
-                        <li class="nav-item"><a href="#row-presentacion" class="nav-link">NUESTROS PROFESIONALES</a></li>
-                        <li class="nav-item"><a href="#row-nuestrosServicios" class="nav-link">NUESTROS SERVICIOS</a></li>
+                        <li class="nav-item"><a href="#row-presentacion" class="nav-link">NUESTROS PROFESIONALES</a>
+                        </li>
+                        <li class="nav-item"><a href="#row-nuestrosServicios" class="nav-link">NUESTROS SERVICIOS</a>
+                        </li>
                         <li class="nav-item"><a href="#row-docNecesaria" class="nav-link">PREGUNTAS FRECUENTES</a></li>
                         <button class="btn" onclick="location.href='#row-turnos'" id="btnContactoNav">
                             Solicita un turno</button>
@@ -439,15 +441,20 @@
                 data: datos,
                 dataType: 'json',
                 success: function (response) {
-                    Swal.fire(
-                        'Su turno fue agendado con éxito!',
-                        'Realice el pago para confirmar el turno',
-                        'success'
-                    )
-                    mostrarErrores(response);
+                    if (response.success) {
+                        $("#collapseExample").collapse("show");
+                        Swal.fire(
+                            response.success,
+                            'Realice el pago para continuar',
+                            'success'
+                        )
+                    } else {
+                        mostrarErrores(response)
+                    }
                 },
-                error: function (response) {
-
+                error: function (xhr, textStatus, errorThrow) {
+                    const response = JSON.parse(xhr.responseText)
+                    mostrarErrores(response)
                 }
             })
         });
