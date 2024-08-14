@@ -96,6 +96,7 @@ header a{
 
 #row-presentacion{
     background-color: #e6e6e6;
+    scroll-margin-top: 70px;
 }
 
 #row-presentacion img{
@@ -122,9 +123,10 @@ header a{
 /* row-sobreNosotros */
 
 #row-sobreNosotros{
-    background-color: #515c24;  
+    background-color: #0d3745;  
     padding-top: 100px !important;
     padding-bottom: 100px !important;
+    scroll-margin-top: 70px;
 }
 
 #row-sobreNosotros .row{
@@ -134,8 +136,7 @@ header a{
 #row-sobreNosotros h4{
     font-family: Modernist;
     color:#e6e6e6;
-    font-size: 30px;
-    text-align: justify;   
+    font-size: 30px;  
 }
 
 #row-sobreNosotros h2{
@@ -161,6 +162,7 @@ header a{
 
 #row-docNecesaria{
     background-color: #0D3745;
+    scroll-margin-top: 70px;
 }
 
 #row-docNecesaria h3{
@@ -257,6 +259,7 @@ header a{
 #row-contactanos{    
     background-image: url(assets/pexels-antonio-filigno-10351722.jpg);  
     background-size: cover;    
+    scroll-margin-top: 70px;
 }
 
 #row-contactanos h2{
@@ -277,7 +280,6 @@ header a{
 
 #row-footer{
     background-color: #750821;
-    overflow: hidden;    
 }
 
 
@@ -303,6 +305,7 @@ header a{
     position: relative;
     overflow: hidden;
     /* height: 650px; */
+    scroll-margin-top: 70px;
 }
 
 footer{
@@ -417,7 +420,7 @@ background-color: rgba(245, 244, 242, 0.7);
 } */
 
 .card-body p{
-    color: #fff;
+    color: black;
     font-family: Modernist;
 }
 
@@ -430,6 +433,7 @@ background-color: rgba(245, 244, 242, 0.7);
     background-repeat: no-repeat;
     background-position: center center;
     position: relative; /* Para que el pseudo-elemento se posicione correctamente */
+    scroll-margin-top: 70px;
 }
 #row-nuestrosServicios h2{
     color: #03213a;

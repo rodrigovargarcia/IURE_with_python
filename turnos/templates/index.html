@@ -5,7 +5,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>IURE ciudadania italiana por via judicial | Santiago del Estero Argentina</title>
+    <meta name="description"
+        content="Nuestro estudio jurídico en Santiago del Estero se especializa en trámites de ciudadanía italiana vía judicial. Descubre cómo podemos ayudarte.">
+    <meta name="keywords"
+        content="ciudadanía italiana, trámite judicial, estudio jurídico, Santiago del Estero, Argentina, via judicial">
+    <meta name="author" content="IURE ciudadanias italianas">
+    <meta name="robots" content="index, follow">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="{%static 'style.css'%}">
@@ -68,7 +74,7 @@
             <div class="row">
                 <div class="title ml-3">
                     <div class="wow fadeInDown">
-                        Ciudadanías italianas <br> por vía judicial <br>
+                        <h1> Ciudadanías italianas <br> por vía judicial <br></h1>
                         <button class="btn mt-3" id="btnContacto"
                             onclick="location.href='https://api.whatsapp.com/send?phone=5493855704708&text=hola%20banegas'">¡Contactanos!</button>
                     </div>
@@ -104,34 +110,43 @@
         </div>
 
         <div class="row pt-5" id="row-presentacion">
-            <div class="container-fluid text-center mb-3">
-                <div class="row">
+            <div class="container-fluid mb-3">
+                <div class="row text-center">
                     <h2 class="font-weight-bold mb-3">Nuestros profesionales</h2>
-                    <h4>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore vitae voluptatibus placeat
-                        molestiae vel sequi atque fuga sunt. </h4>
+                    <h4>Los profesionales especializados en el proceso de busqueda, armado y gestion de ciudadanias
+                        italianas.</h4>
                 </div>
                 <div class="row mt-4">
                     <div class="col align-items-center">
                         <div class="wow slideInLeft">
-                            <img src="{% static 'assets/image-cracked.avif' %}" class="circular-img img-fluid"
+                            <img src="{% static 'assets/DR.jpg' %}" class="circular-img img-fluid mx-auto d-block"
                                 alt="Abogado">
                         </div>
-
-                        <h4 class="mt-4">LOREM IPSUM</h4>
-                        <p class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam at ea minima
-                            voluptate dicta sunt saepe iste nam totam quae sint sequi vero hic, ratione aut, soluta id
-                            veniam voluptatibus?</p>
+                        <div class="row">
+                            <h4 class="mt-4 text-center">Dr. Nicolas Vaca Cianferoni</h4>
+                        </div>
+                        <p class="mt-3">Abogado matriculado en Santiago del Estero, trabaja estrechamente con un estudio
+                            jurídico en Italia, con el cual ejerció en Roma y continúa trabajando desde Argentina. Su
+                            especialidad es el análisis exhaustivo y la sistematización de documentación jurídica
+                            compleja, optimizando cada expediente para maximizar las probabilidades de obtener una
+                            sentencia favorable en procesos <br> de ciudadanía italiana por vía judicial.</p>
                     </div>
                     <div class="col align-items-center">
                         <div class="wow slideInRight">
-                            <img src="{% static 'assets/image-cracked.avif' %}" class="circular-img img-fluid"
+                            <img src="{% static 'assets/img_dra.jpg' %}" class="circular-img img-fluid mx-auto d-block"
                                 alt="Abogado">
                         </div>
-
-                        <h4 class="mt-4">LOREM IPSUM</h4>
-                        <p class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero reprehenderit eius
-                            alias dolorem voluptatibus pariatur eveniet possimus hic, adipisci expedita. Porro quisquam,
-                            enim voluptatem alias sequi inventore similique fugiat sunt?</p>
+                        <div class="row">
+                            <h4 class="mt-4 text-center">Dra. Agustina Afur</h4>
+                        </div>
+                        <p class="mt-3">Abogada especializada en la gestión integral de documentación para procesos de
+                            ciudadanía
+                            italiana. Se encarga de la obtención, tramitación y validación de documentos y actas,
+                            coordinando
+                            con instituciones notaríales para asegurar la validez internacional. Su conocimiento tecnico
+                            garantiza que cada
+                            expediente cumpla con los más altos estándares legales, optimizando la eficacia del proceso
+                            judicial.</p>
                     </div>
                 </div>
             </div>
@@ -139,9 +154,9 @@
         <div class="row py-5" id="row-nuestrosServicios">
             <div class="container-fluid">
                 <div class="row justify-content-center mb-5">
-                    <div class="row justify-content-center mb-3 mt-3">
-                        <div class="col-6 text-center">
-                            <h2 class="font-weight-bold mb-3">Nuestros Servicios</h2>
+                    <div class="row justify-content-center align-items-center mb-3 mt-3">
+                        <div class="col-12">
+                            <h2 class="font-weight-bold mb-3 text-center">Nuestros Servicios</h2>
                         </div>
                     </div>
                     <div class="card-grid">
@@ -247,23 +262,36 @@
                                         <button class="accordion-button" id="btnAcordeon" type="button"
                                             data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
                                             aria-controls="collapseOne">
-                                            ¿Por dónde empiezo?
+                                            ¿Por dónde empiezo? ¿Cuáles son los requisitos para obtener la ciudadanía
+                                            italiana?
                                         </button>
                                     </h2>
                                     <div id="collapseOne" class="accordion-collapse collapse show"
                                         data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            •El primer paso es recabar información acerca de tu antepasado italiano
-                                            (nombre y apellido, fecha y lugar de nacimiento, matrimonio y defunción,
-                                            nombre de los padres, entre otros datos relevantes), esta información nos va
-                                            a permitir obtener las partidas correspondientes para poder avanzar hacia el
-                                            siguiente paso. <br>
-                                            •El segundo paso, y ¡MUY importante!, es la solicitud del CNN (Certificado
-                                            de no naturalización), este certificado nos va a permitir obtener
-                                            información acerca de si tu antepasado italiano se naturalizó o no como
-                                            ciudadano argentino. Se trata de un paso muy importante ya que de esto
-                                            depende la posibilidad de obtener o no tu ciudadanía. <br>
-                                            •¿Cómo tramito todo esto? De eso nos encargamos nosotros!
+                                            • Para obtener la ciudadanía italiana, es esencial cumplir con ciertos
+                                            requisitos clave. Primero, debes demostrar que eres descendiente de un
+                                            ciudadano italiano. Esto se verifica mediante el <strong>certificado de
+                                                nacimiento</strong>
+                                            de tu antepasado italiano y un <strong>certificado de no
+                                                naturalización</strong> o
+                                            <strong>certificado de naturalización</strong> según corresponda, que
+                                            confirma que tu
+                                            ancestro no renunció a su ciudadanía italiana. <br> <br>
+                                            Además, deberás proporcionar <strong>actas de nacimiento, matrimonio y
+                                                defunción</strong>,
+                                            que deben estar apostilladas, traducidas y legalizadas conforme a los
+                                            requisitos internacionales. Este proceso asegura que los documentos sean
+                                            válidos y aceptables tanto en Italia como en tu país de residencia.<br> <br>
+                                            Un aspecto importante a considerar es la <strong> vía judicial</strong> para
+                                            la obtención de
+                                            la ciudadanía. Esta opción tiene ventajas significativas, como la
+                                            <strong>vigencia
+                                                prolongada de los documentos</strong>. A diferencia de otros
+                                            procedimientos que
+                                            pueden tener fechas de vencimiento estrictas, la vía judicial permite que
+                                            tus documentos se mantengan válidos durante todo el proceso, brindándote
+                                            mayor flexibilidad y tranquilidad.
                                         </div>
                                     </div>
                                 </div>
@@ -272,23 +300,27 @@
                                         <button class="accordion-button collapsed" id="btnAcordeon" type="button"
                                             data-bs-toggle="collapse" data-bs-target="#collapseTwo"
                                             aria-expanded="false" aria-controls="collapseTwo">
-                                            ¿Qué documentación necesito?
+                                            ¿Es necesario viajar a Italia para obtener tu ciudadanía italiana?
                                         </button>
                                     </h2>
                                     <div id="collapseTwo" class="accordion-collapse collapse"
                                         data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            •Acta de nacimiento, matrimonio y defunción del AVO (Antepasado nacido en
-                                            Italia). <br>
-                                            •Certificado de no naturalización del AVO (CNN/CNE). <br>
-                                            •Actas de nacimiento, matrimonio y defunción (estos dos últimos, sólo en
-                                            caso de corresponder) de todos los integrantes de la línea de descendencia
-                                            hasta llegar a los requirentes de la Ciudadanía. <br>
-                                            •Capturas de pantalla de los intentos para solicitar un turno en el
-                                            consulado (sean de error de página, de negativa o de turnos demasiado
-                                            lejanos). Se trata de un requisito exclusivo para la vía judicial por falta
-                                            de turnos, no así para la vía materna. <br>
-                                            •Poder para juicios.
+                                            No, no es necesario viajar a Italia para obtener tu ciudadanía italiana. En
+                                            IURE ofrecemos un <strong>servicio integral</strong> que te permite
+                                            gestionar todo el trámite
+                                            desde la comodidad de tu hogar. Nuestro equipo se encarga de la
+                                            <strong>búsqueda de
+                                                documentos</strong>, su <strong>corrección, legalización,
+                                                traducción</strong> y preparación para que
+                                            estén aptos para la presentación ante los tribunales italianos. <br><br>
+                                            Aunque el procedimiento judicial puede parecer complejo, nuestro equipo está
+                                            aquí para simplificarlo. Nos ocupamos de cada detalle, gestionando el
+                                            trámite directamente ante los tribunales e instituciones italianas para
+                                            asegurar que tu solicitud se procese de manera fluida y eficiente. Esto te
+                                            permite evitar las complicaciones que suelen surgir cuando se gestiona un
+                                            trámite de tal envergadura.
+
                                         </div>
                                     </div>
                                 </div>
@@ -297,22 +329,29 @@
                                         <button class="accordion-button collapsed" id="btnAcordeon" type="button"
                                             data-bs-toggle="collapse" data-bs-target="#collapseThree"
                                             aria-expanded="false" aria-controls="collapseThree">
-                                            ¿Cuándo corresponde tramitar la ciudadanía por vía judicial?
+                                            ¿Qué opciones tengo si prefiero gestionar mi ciudadanía por mi cuenta?
                                         </button>
                                     </h2>
                                     <div id="collapseThree" class="accordion-collapse collapse"
                                         data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            Actualmente podemos decir que corresponde tramitarla en cualquier momento y
-                                            en todos los casos.
-                                            Anteriormente la ciudadanía por vía judicial era exclusiva para la “vía
-                                            materna” que se da cuando el hijo (hombre o mujer) de la primera mujer que
-                                            se encuentre dentro de la línea de descendencia, haya nacido antes del 1 de
-                                            enero de 1948. Hoy por hoy, ante la real IMPOSIBILIDAD de conseguir turnos
-                                            en los consulados o la lentitud de los mismos, y ante lo costoso en lo
-                                            económico y personal que resulta viajar a Italia a tramitar nuestra
-                                            ciudadania, podemos realizarla judicialmente con el patrocinio de
-                                            profesionales especializados al efecto en un TIEMPO COHERENTE Y EFECTIVO.
+                                            Si prefieres gestionar tu ciudadanía italiana por tu cuenta, en IURE te
+                                            ofrecemos <strong>asesoramiento profesional</strong> para guiarte a lo largo
+                                            del proceso.
+                                            Podemos proporcionarte <strong>orientación detallada</strong> sobre los
+                                            requisitos, los
+                                            documentos necesarios y los pasos a seguir para asegurarte de que tu
+                                            solicitud esté completa y bien presentada. <br><br>
+                                            Además, te asistimos en la <strong>verificación de documentos</strong> y en
+                                            la <strong>resolución de dudas</strong> que puedan surgir durante el
+                                            trámite.
+                                            Nuestro objetivo es brindarte la <strong>seguridad</strong> de que estás en
+                                            el camino correcto,
+                                            incluso si decides manejar el proceso de manera independiente, tanto si lo
+                                            realizas por consulado como si optas por la vía administrativa en Italia.
+                                            Estamos disponibles para ofrecerte apoyo en cualquier etapa del proceso y
+                                            responder a tus preguntas, asegurándonos de que puedas avanzar con confianza
+                                            y eficacia.
                                         </div>
                                     </div>
                                 </div>
@@ -361,9 +400,9 @@
                     <h5 class="text-uppercase mb-4 font-weight-bold text-dark-emphasis">Nostros</h5>
                     <hr class="mb-4">
                     <p class="justify-content-around">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto rem sit excepturi facilis
-                        inventore sapiente esse illum? Rerum deserunt tempora minus voluptas quos distinctio
-                        perferendis, magnam tenetur ea ipsa aliquid.
+                        Somos una pareja de abogados especializados en ciudadanía italiana. Trabajamos en equipo,
+                        dividiendo tareas eficientemente para ofrecer un servicio integral y personalizado con precisión
+                        y dedicación.
                     </p>
                 </div>
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
@@ -374,17 +413,22 @@
                     <p><a href="#">Juicios</a></p>
                     <p><a href="#">Ayuda</a></p>
                 </div>
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <div class="col-md-2 col-lg-2 col-xl-3 mx-auto mt-3">
                     <h5 class="text-uppercase mb-4 font-weight-bold text-dark-emphasis">Contacto</h5>
                     <hr class="mb-4">
                     <p>
-                        <li class="fas fa-home me-3"></li> Santiago del Estero
+                        <li class="fas fa-home me-3"></li> Absalon Rojas N°835, Santiago del Estero.
                     </p>
                     <p>
-                        <li class="fas fa-envelope me-3"></li> iure@gmail.com
+                        <li class="fas fa-envelope me-3"></li> archivos.iure.estudio@gmail.com
                     </p>
                     <p>
-                        <li class="fas fa-phone me-3"></li> +54-11-63019724
+                        <li class="fas fa-phone me-3"></li> <strong>Dr. Vaca Cianferoni Juan Nicolas</strong>
+                        <br> +54 385-5036948 <br>
+                    </p>
+                    <p>
+                        <li class="fas fa-phone me-3"></li> <strong>Dra. Afur Agustina</strong>
+                        <br> +54 385-5851172 <br>
                     </p>
                 </div>
                 <hr class="mb-4">
@@ -449,13 +493,14 @@
                             'success'
                         )
                     } else {
-                        mostrarErrores(response)
+                        Swal.fire({
+                            icon: "error",
+                            title: "Oops...",
+                            text: response.error,
+                            footer: 'Intente nuevamente por favor.'
+                        });
                     }
                 },
-                error: function (xhr, textStatus, errorThrow) {
-                    const response = JSON.parse(xhr.responseText)
-                    mostrarErrores(response)
-                }
             })
         });
 

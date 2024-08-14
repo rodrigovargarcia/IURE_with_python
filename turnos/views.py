@@ -5,6 +5,7 @@ from .models import Turno
 from datetime import date
 from django.http import JsonResponse
 
+
 def reservar_turno(request):
     context = proceso_pago()
     return render(request, "index.html", context)
@@ -40,7 +41,8 @@ def guardar_datos(request):
 
 
 def proceso_pago():
-    sdk=mercadopago.SDK('APP_USR-6379049892624308-091120-f48c14cefda645127c7de2b10bf3e3eb-1476562297')
+    sdk = mercadopago.SDK(
+        'APP_USR-6379049892624308-091120-f48c14cefda645127c7de2b10bf3e3eb-1476562297')
     compra = {
         "items": [
             {
@@ -50,13 +52,13 @@ def proceso_pago():
                 "unit_price": 2500  # Precio del producto en ARS
             }
         ],
-            "back_urls": {
-        "success": "https://m5k4s9ps-8000.brs.devtunnels.ms/confirmar/",
-        "failure": "http://127.0.0.1:8000/failure",
-        "pending": "https://127.0.0.1:8000/pendings"
-    },
-    "auto_return": "approved",
-    #"notification_url": "https://75jqdp2p-8000.brs.devtunnels.ms/guardar"
+        "back_urls": {
+            "success": "https://iureciudadanias.com/confirmar/",
+            "failure": "http://127.0.0.1:8000/failure",
+            "pending": "https://127.0.0.1:8000/pendings"
+        },
+        "auto_return": "approved",
+        "notification_url": "https://75jqdp2p-8000.brs.devtunnels.ms/guardar"
     }
     fecha = date.today()
     fecha_actual = fecha.strftime("%Y-%m-%d")
@@ -66,7 +68,7 @@ def proceso_pago():
     formulario = TurnoForm()
     preference_response = sdk.preference().create(compra)
     preference = preference_response["response"]
-    #print(preference)
+    print(preference)
     context = {
         "fecha_actual": fecha_actual,
         "preference": preference,
@@ -78,12 +80,10 @@ def proceso_pago():
     return context
 
 
-
-
 # TESTUSER1658953798
 # kLAyJMzoIf
 
 
-#comprador
-#TESTUSER419598720
-#GJ1rjdmlhI
+# comprador
+# TESTUSER419598720
+# GJ1rjdmlhI
