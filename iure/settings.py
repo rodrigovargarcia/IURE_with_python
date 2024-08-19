@@ -11,10 +11,14 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+from local_settings import ALLOWED_HOST
+from local_settings import DEBUG
+from local_settings import USER_DB
+from local_settings import PASSOWRD_DB
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+print(BASE_DIR)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -23,9 +27,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-5ytl0t3k+k9m=g$p=n@$le4_ip+drv=vv(onrhuu8*#rmioo%l'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = DEBUG
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ALLOWED_HOST
 
 MERCADOPAGO_CLIENT_ID = '6379049892624308'
 MERCADOPAGO_CLIENT_SECRET = 'DC4qG7eoUBPTMrkWK6t5Qqlij2mFSaFk'
@@ -87,8 +91,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'iure',
-        'USER': 'juancruz',
-        'PASSWORD': 'Juancruz93',
+        'USER': USER_DB,
+        'PASSWORD': PASSOWRD_DB,
         'HOST': 'localhost',
         'PORT': '3306',
     }
@@ -133,5 +137,7 @@ STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
+
+STATICFILES_DIRS = [BASE_DIR / 'static']
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
