@@ -80,10 +80,3 @@ def proceso_pago():
     return context
 
 
-# TESTUSER1658953798
-# kLAyJMzoIf
-
-
-# comprador
-# TESTUSER419598720
-# GJ1rjdmlhI
