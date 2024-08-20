@@ -4,6 +4,8 @@ import mercadopago
 from .models import Turno
 from datetime import date
 from django.http import JsonResponse
+from local_settings import ACCESS_TOKEN
+from local_settings import NOTIFICACION_URL
 
 
 def reservar_turno(request):
@@ -41,23 +43,23 @@ def guardar_datos(request):
 
 def proceso_pago():
     sdk = mercadopago.SDK(
-        'APP_USR-6379049892624308-091120-f48c14cefda645127c7de2b10bf3e3eb-1476562297')
+        ACCESS_TOKEN)
     compra = {
         "items": [
             {
                 "title": "Turno con Iure",
                 "quantity": 1,
                 "currency_id": "ARS",
-                "unit_price": 2500  # Precio del producto en ARS
+                "unit_price": 7000  # Precio del producto en ARS
             }
         ],
         "back_urls": {
-            "success": "https://iureciudadanias.com/confirmar/",
+            "success": NOTIFICACION_URL + "/confirmar/",
             "failure": "http://127.0.0.1:8000/failure",
             "pending": "https://127.0.0.1:8000/pendings"
         },
         "auto_return": "approved",
-        "notification_url": "https://iureciudadanias.com/guardar"
+        "notification_url": NOTIFICACION_URL + "/guardar"
     }
     fecha = date.today()
     fecha_actual = fecha.strftime("%Y-%m-%d")
