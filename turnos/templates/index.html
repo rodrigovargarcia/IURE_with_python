@@ -476,7 +476,7 @@
 
 
             $.ajax({
-                url: 'http://127.0.0.1:8000/guardar/',
+                url: '/guardar/',
                 type: 'POST',
                 data: datos,
                 dataType: 'json',
@@ -507,7 +507,6 @@
         });
         const bricksBuilder = mp.bricks();
         const preferenceId = "{{ preference.id }}"
-        console.log(preferenceId)
 
         mp.bricks().create("wallet", "wallet_container", {
             initialization: {
